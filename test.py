@@ -11,15 +11,18 @@ def teardown_module():
 
 def setup_function():
     print('<<<Setup Function>>>')
+    global count
     count = 1
 
 def teardown_function():
     print('<<<Teardown Function>>>')
+    global count
     count = 0
 
 @with_setup(setup_function, teardown_function)
 def test_function():
     print('<<<Test function>>>')
+    global count
     assert count == 1
 
 @with_setup(setup_function, teardown_function)
@@ -37,6 +40,7 @@ def teardown_generator_function():
 @with_setup(setup_generator_function, teardown_generator_function)
 def generator_function(step,i):
     print('<<<generator_function {}>>>'.format(i+1))
+    global count
     count = count + step
     assert count == 1 + step*(i+1)
 
