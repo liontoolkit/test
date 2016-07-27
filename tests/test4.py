@@ -66,7 +66,7 @@ class TestMyModule:
 
     def test___init__(self):
         print('<<<Test __init__>>>')
-        assert self.obj.number1 == 1
+        assert self.obj.number1 != 1
         assert self.obj.number2 == 2
 
     def test_my_function(self):
