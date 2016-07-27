@@ -38,7 +38,8 @@ dependencies:
 
   # we automatically cache and restore many dependencies between
   # builds. If you need to, you can add custom paths to cache:
-  #cache_directories:
+  cache_directories:
+    - "/opt/circleci/.pyenv/versions/3.5.2"
     #- "custom_1"   # relative to the build directory
     #- "~/custom_2" # relative to the user's home directory
 
@@ -52,7 +53,7 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - nosetests --with-coverage --with-xunit --cover-package=src --cover-html --cover-html-dir=$CIRCLE_ARTIFACTS --xunit-file=$CIRCLE_TEST_REPORTS/nose/nosetests.xml
+    - nosetests --with-coverage --with-xunit --cover-package=src --cover-html --cover-html-dir=$CIRCLE_ARTIFACTS --xunit-file=$CIRCLE_TEST_REPORTS/nosetests.xml
   #post:
     #- bundle exec rake jasmine:ci: # add an extra test type
         #environment:
