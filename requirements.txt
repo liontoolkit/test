@@ -1,2 +1,3 @@
 nose
 nose-cov
+nose-parallel
