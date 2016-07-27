@@ -1,5 +1,5 @@
 from nose.tools import with_setup
-from .MyModule import MyModule
+from MyModule import MyModule
 
 count = 0
 
