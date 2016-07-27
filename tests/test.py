@@ -1,9 +1,6 @@
-import sys
-sys.path.append('..')
-
 from nose.tools import with_setup
 
-from MyModule import MyModule
+from src.MyModule import MyModule
 
 count = 0
 
