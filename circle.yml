@@ -52,7 +52,7 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - nosetests --with-coverage --with-xunit --cover-package=src --cover-html --cover-html-dir=$CIRCLE_ARTIFACTS --xunit-file=$CIRCLE_TEST_REPORTS/nosetests.xml --with-parallel --with-parallel-salt-env $CIRCLE_BUILD_NUM
+    - nosetests --with-coverage --with-xunit --cover-package=src --cover-html --cover-html-dir=$CIRCLE_ARTIFACTS --xunit-file=$CIRCLE_TEST_REPORTS/nosetests.xml --with-parallel --parallel-salt $CIRCLE_BUILD_NUM
   #post:
     #- bundle exec rake jasmine:ci: # add an extra test type
         #environment:
