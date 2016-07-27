@@ -7,7 +7,7 @@ machine:
   # Version of python to use
   python:
     version:
-      3.5
+      3.5.2
 
   # Override /etc/hosts
   #hosts:
