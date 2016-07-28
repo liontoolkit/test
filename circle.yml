@@ -58,8 +58,7 @@ test:
         files:
           - tests/test*.py
   post:
-    - coveralls:
-        parallel: true
+    - coveralls
           #RAILS_ENV: test
           #RACK_ENV: test
 
@@ -75,3 +74,6 @@ test:
   #webhooks:
     # A list of hashes representing hooks. Only the url field is supported.
     #- url: https://someurl.com/hooks/circle
+notify:
+  webhooks:
+    - url: https://coveralls.io/webhook?repo_token=$COVERALLS_REPO_TOKEN
